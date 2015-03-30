@@ -10,13 +10,14 @@ window.bgcolor("white")
 window.title("Forca da Força do Enforcamento")
 forca=turtle.Turtle()
 forca.speed(5)
-forca.penup()
+forca.pendown()
 dfup=200
 ang90=90
 dfrg=52
 dfdw=21
 forca.color("black")
 forca.setpos(21,0)
+forca.left(ang90)
 forca.forward(dfup)
 forca.right(ang90)
 forca.forward(dfrg)
@@ -29,7 +30,7 @@ error=0
 if error==1:
     err1=turtle.Turtle()
     err1.speed(5)
-    err1.penup()
+    err1.pendown()
     dfup=200
     ang90=90
     dfrg=52
@@ -45,7 +46,7 @@ if error==1:
 if error==2:
     err2=turtle.Turtle()
     err2.speed(5)
-    err2.penup()
+    err2.pendown()
     dfup=200
     ang90=90
     dfrg=52
@@ -64,7 +65,7 @@ if error==2:
 if error==3:
     err3=turtle.Turtle()
     err3.speed(5)
-    err3.penup()
+    err3.pendown()
     dfup=200
     ang90=90
     ang45=45
@@ -86,7 +87,7 @@ if error==3:
 if error==4:
     err4=turtle.Turtle()
     err4.speed(5)
-    err4.penup()
+    err4.pendown()
     dfup=200
     ang90=90
     ang45=45
@@ -108,7 +109,7 @@ if error==4:
 if error==5:
     err5=turtle.Turtle()
     err5.speed(5)
-    err5.penup()
+    err5.pendown()
     dfup=200
     ang90=90
     ang45=45
@@ -130,7 +131,7 @@ if error==5:
 if error==6:
     err6=turtle.Turtle()
     err6.speed(5)
-    err6.penup()
+    err6.pendown()
     dfup=200
     ang90=90
     ang45=45
@@ -152,7 +153,7 @@ if error==6:
 if error==7:
     err7=turtle.Turtle()
     err7.speed(5)
-    err7.penup()
+    err7.pendown()
     dfup=200
     ang90=90
     ang45=45
@@ -172,15 +173,13 @@ if error==7:
     print("Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento.")
 #line=turtle.Turtle()
 #line.setpos(400,85)
-#line.penup()
-#ang90=90
-#line.right(ang90)
+#line.pendown()
 #line.write(len(w)*"___ ")
 while error<7:
     et= input("E a letra é... ") #et é a letra que o usuário escolhe e consequentemente digita para jogar este jogo
     for i in w:    
         if et in w:
-            print (et[i])
+            print (et[i])   
         else:
             error+=1
 window.exitonclick()

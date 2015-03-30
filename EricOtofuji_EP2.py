@@ -186,10 +186,10 @@ if error==7:
     err7.forward(dfdw)
     err7.forward(dfrg)
     print("Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento.")
-#line=turtle.Turtle()
-#line.setpos(400,85)
-#line.pendown()
-#line.write(len(w)*"___ ")
+line=turtle.Turtle()
+line.setpos(400,85)
+line.pendown()
+line.write(len(w)*"___ ")
 while error<7:
     errr=True
     for i in w:

@@ -24,9 +24,9 @@ forca.right(ang90)
 forca.forward(dfrg)
 forca.right(dfup)
 forca.forward(dfdw)
-with open("db.txt", encoding="utf-8") as db: #from alcor.concordia.ca/~vjorge/Palavras-Cruzadas/Lista-de-Palavras.txt
-    word=db.read().splitlines()
-w = random.shuffle(word)
+arq = open("db.txt", encoding="utf-8") 
+word=arq.readlines()
+w = random.choice(word)
 error=0
 if error==1:
     err1=turtle.Turtle()
@@ -172,17 +172,21 @@ if error==7:
     err7.forward(dfdw)
     err7.forward(dfrg)
     print("Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento.")
-line=turtle.Turtle()
-line.setpos(400,85)
-line.penup()
-ang90=90
-line.right(ang90)
-len(w(line.write("___  ")))
+#line=turtle.Turtle()
+#line.setpos(400,85)
+#line.penup()
+#ang90=90
+#line.right(ang90)
+#line.write(len(w)*"___  ")
+
+
 while error<7:
-    et = input("E a letra é... ") #et é a letra que o usuário escolhe e consequentemente digita para jogar este jogo
+    print(1)
+    et = input.upper("E a letra é... ") #et é a letra que o usuário escolhe e consequentemente digita para jogar este jogo
     for i in w:    
         if et in w:
             print (et[i])
         else:
             error+=1
+            
 window.exitonclick()

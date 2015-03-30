@@ -191,10 +191,12 @@ if error==7:
 #line.pendown()
 #line.write(len(w)*"___ ")
 while error<7:
-    et=input("E a letra é... ") #et é a letra que o usuário escolhe e consequentemente digita para jogar este jogo
-    for i in w:    
+    errr=True
+    for i in w:
+        et=input("E a letra é... ")    
         if et in w:
-            print (et[i])   
-        else:
-            error+=1
+            print (et[i])
+            errr=False
+    if errr:
+        error+=1
 window.exitonclick()

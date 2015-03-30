@@ -29,9 +29,6 @@ with open("db.txt", encoding="utf-8") as db: #from alcor.concordia.ca/~vjorge/Pa
 w = random.shuffle(word)
 while w == w:
     w = random.shuffle(word)
-et = window.textinput("E a letra é... ") #et é a letra que o usuário escolhe e consequentemente digita para jogar este jogo
-while et != "a" or "b" or "c" or "d" or "e" or "f" or "g" or "h" or "i" or "j" or "k" or "l" or "m" or "n" or "o" or "p" or "q" or "r" or "s" or "t" or "u" or "v" or "w" or "x" or "y" or "z" or "A" or "B" or "C" or "D" or "E" or "F" or "G" or "H" or "I" or "J" or "K" or "L" or "M" or "N" or "O" or "P" or "Q" or "R" or "S" or "T" or "U" or "V" or "W" or "X" or "Y" or "Z" or "-":
-    et = input("NÃO, CRIATURA! Use apenas letras ou hífen! Escolha uma LETRA ou hífen: ")
 error=0
 if error==1:
     err1=turtle.Turtle()
@@ -177,3 +174,11 @@ if error==7:
     err7.forward(dfdw)
     err7.forward(dfrg)
     print("Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento.")
+while error<7:
+    et = input("E a letra é... ") #et é a letra que o usuário escolhe e consequentemente digita para jogar este jogo
+    while et != "a" or "b" or "c" or "d" or "e" or "f" or "g" or "h" or "i" or "j" or "k" or "l" or "m" or "n" or "o" or "p" or "q" or "r" or "s" or "t" or "u" or "v" or "w" or "x" or "y" or "z" or "A" or "B" or "C" or "D" or "E" or "F" or "G" or "H" or "I" or "J" or "K" or "L" or "M" or "N" or "O" or "P" or "Q" or "R" or "S" or "T" or "U" or "V" or "W" or "X" or "Y" or "Z" or "-":
+        et = input("NÃO, CRIATURA! Use apenas letras ou hífen! Escolha uma LETRA ou hífen: ")
+    if et in w:
+        print (et in w)
+    else:
+        error+=1

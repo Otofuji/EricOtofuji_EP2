@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Mar 25 10:29:02 2015
-
 @author: Eric Otofuji
 """
-
 import turtle
 import random
 window=turtle.Screen()
@@ -177,16 +175,12 @@ if error==7:
 #line.penup()
 #ang90=90
 #line.right(ang90)
-#line.write(len(w)*"___  ")
-
-
+#line.write(len(w)*"___ ")
 while error<7:
-    print(1)
-    et = input.upper("E a letra é... ") #et é a letra que o usuário escolhe e consequentemente digita para jogar este jogo
+    et= input("E a letra é... ") #et é a letra que o usuário escolhe e consequentemente digita para jogar este jogo
     for i in w:    
         if et in w:
             print (et[i])
         else:
             error+=1
-            
 window.exitonclick()

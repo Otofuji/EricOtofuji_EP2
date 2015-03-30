@@ -186,14 +186,26 @@ if error==7:
     err7.forward(dfdw)
     err7.forward(dfrg)
     print("Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento.")
+a="___ "
 line=turtle.Turtle()
-line.setpos(400,85)
+line.penup()
+line.setpos(50,85)
 line.pendown()
-line.write(len(w)*"___ ")
+line.write(len(w)*a)
 while error<7:
     errr=True
     for i in w:
-        et=input("E a letra é... ")    
+        from Tkinter import *
+        master=Tk()
+        e=Entry(master)
+        e.pack()
+        e.focus_set()
+        def callback():
+            return e.get()
+        b=Button(master,text="OK",width=10,command=callback)
+        b.pack()
+        mainloop
+        et=Entry(Tk("E a letra é... "))
         if et in w:
             print (et[i])
             errr=False

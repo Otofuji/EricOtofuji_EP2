@@ -185,7 +185,7 @@ if error==7:
     err7.left(ang90)
     err7.forward(dfdw)
     err7.forward(dfrg)
-    print("Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento.")
+    window.write("Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento.")
 a="___ "
 line=turtle.Turtle()
 line.penup()

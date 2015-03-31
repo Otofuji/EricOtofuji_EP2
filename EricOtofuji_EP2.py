@@ -195,20 +195,9 @@ line.write(len(w)*a)
 while error<7:
     errr=True
     for i in w:
-        from Tkinter import *
-        master=Tk()
-        e=Entry(master)
-        e.pack()
-        e.focus_set()
-        def callback():
-            return e.get()
-        b=Button(master,text="OK",width=10,command=callback)
-        b.pack()
-        mainloop
-        et=Entry(Tk("E a letra é... "))
+        et=window.textinput("E a letra é... ")
         if et in w:
             print (et[i])
             errr=False
     if errr:
         error+=1
-window.exitonclick()

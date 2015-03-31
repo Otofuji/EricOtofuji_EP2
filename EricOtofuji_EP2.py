@@ -194,10 +194,10 @@ line.pendown()
 line.write(len(w)*a)
 while error<7:
     errr=True
-    for i in w:
-        et=window.textinput("E a letra é... ")
+    for et in w:
+        et=window.textinput("Sua escolha","Habemus letra")
         if et in w:
-            print (et[i])
+            line.write(et[w])
             errr=False
     if errr:
         error+=1

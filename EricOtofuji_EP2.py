@@ -5,11 +5,12 @@ Created on Wed Mar 25 10:29:02 2015
 """
 import turtle
 import random
+error=0
 window=turtle.Screen()
 window.bgcolor("white")
 window.title("Forca da Força do Enforcamento")
 forca=turtle.Turtle()
-forca.speed(1)
+forca.speed(5)
 forca.penup()
 dfup=200
 ang90=90
@@ -26,11 +27,11 @@ forca.right(ang90)
 forca.forward(dfdw)
 arq = open("db.txt", encoding="utf-8") 
 word=arq.readlines()
-w = random.choice(word)
-error=0
+wr = random.choice(word)
+w=[len(wr)]
 if error==1:
     err1=turtle.Turtle()
-    err1.speed(1)
+    err1.speed(5)
     err1.penup()
     dfup=200
     ang90=90
@@ -48,7 +49,7 @@ if error==1:
     err1.circle(12)
 if error==2:
     err2=turtle.Turtle()
-    err2.speed(1)
+    err2.speed(5)
     err2.penup()
     dfup=200
     ang90=90
@@ -69,7 +70,7 @@ if error==2:
     err2.forward(dfrg)
 if error==3:
     err3=turtle.Turtle()
-    err3.speed(1)
+    err3.speed(5)
     err3.penup()
     dfup=200
     ang90=90
@@ -93,7 +94,7 @@ if error==3:
     err3.forward(dfdw)
 if error==4:
     err4=turtle.Turtle()
-    err4.speed(1)
+    err4.speed(5)
     err4.penup()
     dfup=200
     ang90=90
@@ -117,7 +118,7 @@ if error==4:
     err4.forward(dfdw)
 if error==5:
     err5=turtle.Turtle()
-    err5.speed(1)
+    err5.speed(5)
     err5.penup()
     dfup=200
     ang90=90
@@ -141,7 +142,7 @@ if error==5:
     err5.forward(dfdw)
 if error==6:
     err6=turtle.Turtle()
-    err6.speed(1)
+    err6.speed(5)
     err6.penup()
     dfup=200
     ang90=90
@@ -165,7 +166,7 @@ if error==6:
     err6.forward(dfdw)
 if error==7:
     err7=turtle.Turtle()
-    err7.speed(1)
+    err7.speed(5)
     err7.penup()
     dfup=200
     ang90=90
@@ -195,7 +196,8 @@ line.write(len(w)*a)
 while error<7:
     errr=True
     for et in w:
-        et=window.textinput("Sua escolha","Habemus letra")
+        el=window.textinput("Sua escolha","Habemus letra")
+        et=el.upper
         if et in w:
             line.write(et[w])
             errr=False

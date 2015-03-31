@@ -196,10 +196,10 @@ line.write(len(w)*a)
 while error<7:
     errr=True
     for et in w:
-        el=window.textinput("Sua escolha","Habemus letra")
-        et=el.upper
+        et=window.textinput("Sua escolha","Habemus letra").upper
         if et in w:
             line.write(et[w])
             errr=False
     if errr:
         error+=1
+window.write("Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento.")

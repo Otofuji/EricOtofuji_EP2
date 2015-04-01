@@ -29,21 +29,30 @@ arq = open("db.txt", encoding="utf-8")
 word=arq.readlines()
 wr = random.choice(word)
 print(wr)
-#w=[len(wr)]
+w=len(wr)
 a="___  "
 line=turtle.Turtle()
 line.penup()
 line.setpos(50,85)
 line.pendown()
-line.write((len(wr)*a)
+line.write((len(wr)*a))
 while error<7:
     errr=True
-    for et in w:
-        et=window.textinput("Sua escolha","Habemus letra").upper
-        if et in w:
-            line.write(et[w])
-            errr=False
-    if errr:
+    et=window.textinput("Sua escolha","Habemus letra").upper()
+    if et in wr:
+        l=[]
+        for i in range(w):
+            if wr[i]==et:
+                l.append(et)
+            print(l)
+        for pos in len(l):
+            lr=turtle.Turtle()
+            lr.penup()
+            lr.setpos(50+5*(pos),85)
+            lr.pendown()
+            lr.write(et)
+        errr=False
+    if errr==True:
         error+=1
     if error==1:
         err1=turtle.Turtle()
@@ -202,6 +211,5 @@ while error<7:
         err7.left(ang90)
         err7.forward(dfdw)
         err7.forward(dfrg)
-        window.write("Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento.")
-window.write("Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento.")
+        window.textinput("GAME OVER","Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento. \nAperte OK e clique em qualquer lugar para sair. Mandaremos flores no seu velório")
 window.exitonclick()

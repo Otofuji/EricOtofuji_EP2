@@ -17,7 +17,7 @@ ang90=90
 dfrg=52
 dfdw=21
 forca.color("black")
-forca.setpos(-280,0)
+forca.setpos(-280,-150)
 forca.left(ang90)
 forca.pendown()
 forca.forward(dfup)
@@ -30,7 +30,7 @@ word=arq.readlines()
 wr = random.choice(word)
 print(wr)
 w=len(wr)
-a="___  "
+a="_ "
 line=turtle.Turtle()
 line.penup()
 line.setpos(50,85)
@@ -40,18 +40,21 @@ while error<7:
     errr=True
     et=window.textinput("Sua escolha","Habemus letra").upper()
     if et in wr:
-        l=[]
+        l=[] #jgjhgh
+        print(wr)        
         for i in range(w):
             if wr[i]==et:
                 l.append(et)
             print(l)
-        for pos in range(len(l)):
+        for pos in range(len(wr)):
             lr=turtle.Turtle()
             lr.penup()
-            lr.setpos(50+5*(pos),85)
+            lr.setpos(50+15*(pos),85)
             lr.pendown()
-            lr.write(et)
-        errr=False
+            #lr.write(et)
+            if et in wr[pos]:            
+                lr.write(et)
+                errr=False
     if errr==True:
         error+=1
     if error==1:
@@ -63,7 +66,7 @@ while error<7:
         dfrg=52
         dfdw=21
         err1.color("black")
-        err1.setpos(-280,0)
+        err1.setpos(-280,-150)
         err1.left(ang90)
         err1.pendown()
         err1.forward(dfup)
@@ -81,7 +84,7 @@ while error<7:
         dfrg=52
         dfdw=21
         err2.color("black")
-        err2.setpos(-280,0)
+        err2.setpos(-280,-150)
         err2.left(ang90)
         err2.pendown()
         err2.forward(dfup)
@@ -103,7 +106,7 @@ while error<7:
         dfrg=52
         dfdw=21
         err3.color("black")
-        err3.setpos(-280,0)
+        err3.setpos(-280,-150)
         err3.left(ang90)
         err3.pendown()
         err3.forward(dfup)
@@ -127,7 +130,7 @@ while error<7:
         dfrg=52
         dfdw=21
         err4.color("black")
-        err4.setpos(-280,0)
+        err4.setpos(-280,-150)
         err4.left(ang90)
         err4.pendown()
         err4.forward(dfup)
@@ -151,7 +154,7 @@ while error<7:
         dfrg=52
         dfdw=21
         err5.color("black")
-        err5.setpos(-280,0)
+        err5.setpos(-280,-150)
         err5.left(ang90)
         err5.pendown()
         err5.forward(dfup)
@@ -175,7 +178,7 @@ while error<7:
         dfrg=52
         dfdw=21
         err6.color("black")
-        err6.setpos(-280,0)
+        err6.setpos(-280,-150)
         err6.left(ang90)
         err6.pendown()
         err6.forward(dfup)
@@ -199,7 +202,7 @@ while error<7:
         dfrg=52
         dfdw=21
         err7.color("red")
-        err7.setpos(-280,0)
+        err7.setpos(-280,-150)
         err7.left(ang90)
         err7.pendown()
         err7.forward(dfup)
@@ -211,4 +214,4 @@ while error<7:
         err7.left(ang90)
         err7.forward(dfdw)
         err7.forward(dfrg)
-        window.textinput("GAME OVER","Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento. \n\nMandaremos flores no seu velório. ")
+        window.textinput("GAME OVER","Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento. \n\nMandaremos flores no seu velório. Onde será seu velório?")

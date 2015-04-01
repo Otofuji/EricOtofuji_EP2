@@ -45,7 +45,7 @@ while error<7:
             if wr[i]==et:
                 l.append(et)
             print(l)
-        for pos in len(l):
+        for pos in range(len(l)):
             lr=turtle.Turtle()
             lr.penup()
             lr.setpos(50+5*(pos),85)
@@ -211,5 +211,4 @@ while error<7:
         err7.left(ang90)
         err7.forward(dfdw)
         err7.forward(dfrg)
-        window.textinput("GAME OVER","Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento. \nAperte OK e clique em qualquer lugar para sair. Mandaremos flores no seu velório")
-window.exitonclick()
+        window.textinput("GAME OVER","Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento. \n\nMandaremos flores no seu velório. ")

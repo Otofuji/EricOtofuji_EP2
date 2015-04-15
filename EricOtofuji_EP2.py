@@ -215,3 +215,4 @@ while error<7:
         err7.forward(dfdw)
         err7.forward(dfrg)
         window.textinput("GAME OVER","Sinto muito. Você perdeu. É tarde demais e foi morto por enforcamento. \n\nMandaremos flores no seu velório. Onde será seu velório?")
+        #comentário
